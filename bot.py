@@ -2,8 +2,12 @@ import discord
 import os
 
 TOKEN = os.getenv("TOKEN")
-CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
-ROLE_ID = int(os.getenv("ROLE_ID"))
+CHANNEL_ID = int(os.getenv("CHANNEL_ID") or 0)
+ROLE_ID = int(os.getenv("ROLE_ID") or 0)
+
+print("TOKEN:", os.getenv("TOKEN"))
+print("CHANNEL_ID:", os.getenv("CHANNEL_ID"))
+print("ROLE_ID:", os.getenv("ROLE_ID"))
 
 intents = discord.Intents.default()
 intents.message_content = True
