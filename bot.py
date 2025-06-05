@@ -24,6 +24,6 @@ async def on_message(message):
 
     if message.channel.id == CHANNEL_ID and message.webhook_id:
         role_mention = f"<@&{ROLE_ID}>"
-        await message.channel.send(f"{role_mention} New post from followed channel!")
+        await message.channel.send(f"{role_mention} SCOALA FA, CA TE FUTE MAVEN")
 
 client.run(TOKEN)
