@@ -19,8 +19,8 @@ async def on_message(message):
         return
 
     if message.content.strip() == "!status":
-    await message.channel.send("fut pe iani")
-    return
+        await message.channel.send("fut pe iani")
+        return
 
     if message.channel.id == CHANNEL_ID and message.webhook_id:
         role_mention = f"<@&{ROLE_ID}>"
