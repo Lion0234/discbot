@@ -18,6 +18,10 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    if message.content.strip() == "!status":
+    await message.channel.send("fut pe iani")
+    return
+
     if message.channel.id == CHANNEL_ID and message.webhook_id:
         role_mention = f"<@&{ROLE_ID}>"
         await message.channel.send(f"{role_mention} New post from followed channel!")
